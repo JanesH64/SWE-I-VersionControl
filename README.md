@@ -30,4 +30,7 @@ University project: Simple version control for text files
 
 
 #Contributors
-@hannphry
+[Hannphry](https://github.com/hannphry)
+[Atidam](https://github.com/atidam)
+[HendrikBrn](https://github.com/HendrikBrn)
+[JanesH64](https://github.com/JanesH64)
