@@ -27,3 +27,7 @@ University project: Simple version control for text files
 ### Build steps
 - Run startApp.sh
 - Open Browser https://localhost:8181
+
+
+#Contributors
+@hannphry
