@@ -29,7 +29,7 @@ University project: Simple version control for text files
 - Open Browser https://localhost:8181
 
 
-#Contributors
+## Contributors
 [Hannphry](https://github.com/hannphry)
 [Atidam](https://github.com/atidam)
 [HendrikBrn](https://github.com/HendrikBrn)
