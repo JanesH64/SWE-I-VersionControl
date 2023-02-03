@@ -1,0 +1,43 @@
+<div class="flex-container">
+  <ng-container *ngIf="isLoading">
+    <div class="flex-center">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!isLoading && file">
+    <div class="toolbar-actions">
+      <div>
+        <h1 class="file-header">
+          <span>{{file.name}}</span>
+            <mat-icon *ngIf="file.locked" title="This file is currently being edited">locked</mat-icon>
+        </h1>
+      </div>
+      <div class="spacer"></div>
+      <button mat-mini-fab color="primary" title="Download file" [disabled]="file.locked" (click)="openDownloadDialog()">
+        <mat-icon>download</mat-icon>
+      </button>
+      <button mat-mini-fab color="primary" title="Upload file" [disabled]="!file.locked" (click)="openUploadDialog()">
+        <mat-icon>upload</mat-icon>
+      </button>
+      <button mat-mini-fab color="primary" title="Delete file" (click)="deleteFile()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    <div class="page-container">
+      <div class="file-info">
+        <app-version-list [file]="file" (fileChanged)="handleFileChanged()"></app-version-list>
+      </div>
+      <div class="page">
+        <p class="text-content">
+          {{file.head.content}}
+        </p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!isLoading && !file">
+    <div class="flex-center">
+      <h1>File does not exist or might have been deleted</h1>
+      <h4>Check if the given file id is correct</h4>
+    </div>
+  </ng-container>
+</div>

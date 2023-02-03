@@ -1,0 +1,18 @@
+
+version: '3'
+services:
+  mongo:
+    image: mongo:5.0.7
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/mongo:/data/db
+  app:
+    build: .
+    ports:
+      - 8181:8181
+    volumes:
+      - ./data/app/logs:/logs
+    depends_on:
+      - mongo

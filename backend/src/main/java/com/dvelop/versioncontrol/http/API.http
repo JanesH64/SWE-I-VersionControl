@@ -1,0 +1,25 @@
+GET http://localhost:8181/api/repositories
+Accept: application/json
+
+
+####
+GET http://localhost:8181/api/repositories/5678
+Accept: application/json
+
+
+####
+GET http://localhost:8181/api/files/
+Accept: application/json
+
+###
+POST http://localhost:8181/api/repositories
+Content-Type: application/json
+
+{
+    "id": "5678",
+    "name": "Test Repo New name",
+    "files": []
+}
+
+####
+GET http://localhost:8181/api/files/d73bccd2-4dab-49bf-8617-0674522fcc41/version/v0
